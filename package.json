@@ -1,0 +1,36 @@
+{
+  "name": "mern-react-2022-support-desk-app",
+  "version": "1.0.0",
+  "description": "A support desk app in React, Redux and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aindriu80/mern-react-2022-support-desk-app.git"
+  },
+  "keywords": [
+    "React",
+    "MongoDB",
+    "Redux"
+  ],
+  "author": "Aindriú Mac Giolla Eoin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aindriu80/mern-react-2022-support-desk-app/issues"
+  },
+  "homepage": "https://github.com/aindriu80/mern-react-2022-support-desk-app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
