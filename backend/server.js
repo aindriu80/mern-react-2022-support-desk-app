@@ -5,7 +5,10 @@ const PORT = process.env.PORT || 8000
 const app = express()
 
 app.get('/', (req, res) => {
-  res.status(201).json({ message: ' Welcome to the Support Desk API' })
+  res.status(200).json({ message: ' Welcome to the Support Desk API' })
 })
+
+// Routes
+app.use('/api/users', require('./routes/userRoutes'))
 
 app.listen(PORT, () => console.log(`Server Has started on port ${PORT}`))
