@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend BROWSER=/opt/firefox/firefox HTTPS=true SSL_CRT_FILE=/etc/mkcert/localhost.pem SSL_KEY_FILE=/etc/mkcert/localhost-key.pem",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +28,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
+    "concurrently": "^7.0.0",
     "dotenv": "^15.0.0",
     "express": "^4.17.2",
     "express-async-handler": "^1.2.0",
