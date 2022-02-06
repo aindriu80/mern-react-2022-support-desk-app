@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend BROWSER=/opt/firefox/firefox HTTPS=true SSL_CRT_FILE=/etc/mkcert/localhost.pem SSL_KEY_FILE=/etc/mkcert/localhost-key.pem",
+    "client": "BROWSER=/opt/firefox/firefox HTTPS=true SSL_CRT_FILE=/etc/mkcert/localhost.pem SSL_KEY_FILE=/etc/mkcert/localhost-key.pem npm start --prefix frontend ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
