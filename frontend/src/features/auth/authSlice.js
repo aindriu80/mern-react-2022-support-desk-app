@@ -8,6 +8,19 @@ const initialState = {
   message: '',
 }
 
+// Register a new user
+export const register = createAsyncThunk(
+  'auth/register',
+  async (user, thunkAPI) => {
+    console.log('User:', user)
+  }
+)
+
+// Login
+export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
+  console.log('User:', user)
+})
+
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
