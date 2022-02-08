@@ -49,10 +49,10 @@ function Login() {
         <form onSubmit={onSubmit}>
           <div className="form-group">
             <input
-              type="text"
-              className="form-control"
-              id="email"
-              name="email"
+              type='email'
+              className='form-control'
+              id='email'
+              name='email'
               value={email}
               onChange={onChange}
               placeholder="Enter your email "
