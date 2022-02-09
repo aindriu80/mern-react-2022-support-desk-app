@@ -36,6 +36,9 @@ export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
   console.log('User:', user)
 })
 
+// Logout
+export const logout = createAsyncThunk('auth/logout',async ()=>{ await  authService.logout() })
+
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -63,8 +66,11 @@ export const authSlice = createSlice({
         state.message = action.payload
         state.user = null
       })
+      .addCase(logout.fulfilled, (state)=>{
+        state.user = null
+      })
   },
-})
+}) 
 
 export const { reset } = authSlice.actions
 export default authSlice.reducer
