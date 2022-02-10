@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
 import { register, reset } from '../features/auth/authSlice'
+import Spinner from '../components/Spinner'
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -56,6 +57,10 @@ function Register() {
     }
   }
 
+  if (isLoading) {
+    return <Spinner />
+  }
+
   return (
     <>
       <section className="heading">
@@ -81,10 +86,10 @@ function Register() {
           </div>
           <div className="form-group">
             <input
-              type='email'
-              className='form-control'
-              id='email'
-              name='email'
+              type="email"
+              className="form-control"
+              id="email"
+              name="email"
               value={email}
               onChange={onChange}
               placeholder="Enter your email "
