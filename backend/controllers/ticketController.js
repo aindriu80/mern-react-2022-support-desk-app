@@ -18,8 +18,8 @@ const getTickets = asyncHandler(async (req, res) => {
 // @desc Get new ticket
 // @route POST /api/tickets
 // @access Private
-const getTickets = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: 'createTickets' })
+const createTicket = asyncHandler(async (req, res) => {
+  res.status(200).json({ message: 'createTicket' })
 })
 
-module.exports = { getTickets, createTickets }
+module.exports = { getTickets, createTicket }
