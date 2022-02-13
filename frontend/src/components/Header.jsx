@@ -24,7 +24,8 @@ function Header() {
           {user ? (
             <li>
               <button className="btn" onClick={onLogout}>
-                <FaSignOutAlt>Logout</FaSignOutAlt>
+                <FaSignOutAlt />
+                Logout
               </button>
             </li>
           ) : (
