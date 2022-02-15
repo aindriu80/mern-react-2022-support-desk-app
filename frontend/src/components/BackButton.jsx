@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 
 const BackButton = ({ url }) => {
   return (
-    <Link to={url} classNAme="btn btn-reverse btn-back">
-      <FaArrowCircleLeft />
-      BAck
+    <Link to={url} className='btn btn-reverse btn-back'>
+      <FaArrowCircleLeft /> Back
     </Link>
   )
 }

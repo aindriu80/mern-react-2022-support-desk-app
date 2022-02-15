@@ -50,16 +50,13 @@ function NewTicket() {
         <div className="form-group">
           <label htmlFor="name">Customer Name</label>
           <input type="text" className="form-control" value={name} disabled />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Customer Email</label>
+          <input type="text" className="form-control" value={email} disabled />
+        </div>
+        <form onSubmit={onSubmit}>
           <div className="form-group">
-            <label htmlFor="email">Customer Email</label>
-            <input
-              type="text"
-              className="form-control"
-              value={email}
-              disabled
-            />
-          </div>
-          <form onSubmit={onSubmit}>
             <label htmlFor="product">Product</label>
             <select
               name="product"
@@ -69,22 +66,23 @@ function NewTicket() {
               <option value="iPhone">iPhone</option>
               <option value="MacBook Pro">MacBook Pro</option>
               <option value="iMac">iMac</option>
+              <option value="iPad">iPad</option>
             </select>
-          </form>
-        </div>
-        <div className="form-group">
-          <label htmlFor="description">Description of the issue</label>
-          <textarea
-            name="description"
-            id="description"
-            className="form-control"
-            placeholder="Please enter a description of the issue"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}></textarea>
-        </div>
-        <div className="form-group">
-          <button className="btn btn-block">Submit</button>
-        </div>
+          </div>
+          <div className="form-group">
+            <label htmlFor="description">Description of the issue</label>
+            <textarea
+              name="description"
+              id="description"
+              className="form-control"
+              placeholder="Please enter a description of the issue"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}></textarea>
+          </div>
+          <div className="form-group">
+            <button className="btn btn-block">Submit</button>
+          </div>
+        </form>
       </section>
     </>
   )
